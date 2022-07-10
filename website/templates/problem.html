@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ problem[1] }}
+{% endblock %}
+
+
+{% block content %}
+<h1>{{problem[1]}}</h1>
+<br>
+{% for line in problem[2] %}
+<p>
+    {{ line }}
+</p>
+{% endfor %}
+<br>
+<br>
+<h3>Enter your code here:</h3>
+<form
+    method="post"
+    action="/submit_solution/{{ problem[0] }}"
+>
+    <textarea
+        name="code"
+        rows="10"
+        cols="100"
+    ></textarea>
+    <br>
+    <button>Submit</button>
+</form>
+{% endblock %}

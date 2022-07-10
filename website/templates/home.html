@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<ol>
+    {% for problem in problems %}
+    <li>
+        {% if problem[0] in solved %}
+        <a
+            href="/problem/{{ problem[0] }}"
+            style="color: green;"
+        > {{ problem[1] }}</a>
+        {% else %}
+        <a
+            href="/problem/{{ problem[0] }}"
+            id="{{ problem[0] }}"
+        > {{ problem[1] }}</a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ol>
+{% endblock %}

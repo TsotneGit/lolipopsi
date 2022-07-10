@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block content %}
+<form
+    action=""
+    method="post">
+    <h3 align="center">
+        Login
+    </h3>
+
+    <div class="form-group" style='text-align:center'>
+        <label for="email">Email address</label>
+        <input
+            type="email"
+            class="form-control w-25 mx-auto"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+        >
+
+        <label for="password">Password</label>
+        <input
+            type="password"
+            class="form-control w-25 mx-auto"
+            id="password"
+            name="password"
+            placeholder="Password"
+        >
+        <br>
+        <div align="center">
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Login
+            </button>
+        </div>
+
+    </div>
+</form>
+{% endblock %}
